@@ -10,7 +10,7 @@ const app = express()
 app.use('/api', express.json())
 //use json middle ware app.use(JSON)
 
-app.get("/api/products", async (req, res) => {
+/* app.get("/api/products", async (req, res) => {
     
     const products = await stripe.products.list({
         limit: 3,
@@ -18,6 +18,6 @@ app.get("/api/products", async (req, res) => {
     console.log(products);
     res.json(products)
     
-} )
+} ) */
 
 app.listen(3000,()=>console.log('Server is running on port 3000.............'));
