@@ -3,6 +3,7 @@ import Radiobutton from './Radio'
 import { Cart } from './Cart';
 import CheckoutFracksatt from './checkoutFracksatt';
 import TotalPrice from './TotalPrice';
+import StripeButton from './stripe-button'
 import './App.css';
 
 
@@ -20,6 +21,7 @@ function Checkout(){
             <CheckoutFracksatt/>
             <Radiobutton />
             <TotalPrice/>
+            < StripeButton />
             
 
         </div>

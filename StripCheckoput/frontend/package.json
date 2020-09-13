@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:5000",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -16,12 +16,13 @@
     "@types/react-stripe-elements": "^6.0.4",
     "@types/stripe": "^7.13.23",
     "antd": "^4.6.3",
+    "axios": "^0.20.0",
     "formik": "^2.1.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
     "react-stripe-elements": "^6.1.2",
     "stripe": "^8.56.0",
     "typescript": "^3.7.5"
@@ -49,5 +50,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.12.44"
-  }
+  },
+  "main": "index.js",
+  "license": "MIT"
 }
