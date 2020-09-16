@@ -38,7 +38,6 @@ app.post('/payment', (req, res) => {
   
   const body = {
     source: req.body.token.id,
-    product: req.body.product, 
     amount: req.body.amount * 100,
     currency: 'SEK'
   };
@@ -51,10 +50,10 @@ app.post('/payment', (req, res) => {
       // Save cartItems to file
       fs.appendFileSync('./orders.json',JSON.stringify (req.body), (err) => {
         if (err) {
-
+          throw err;
         }
         // data.toArra()
-        /* let data = JSON.stringify(cartItems, null, 2); */
+
       })
       res.status(200).send({ success: stripeRes });
     }
