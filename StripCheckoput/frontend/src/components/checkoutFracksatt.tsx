@@ -1,11 +1,7 @@
 import React, { Component, CSSProperties, MouseEvent, useState } from 'react';
-import { Form, Input, Radio, Button, } from 'antd';
-import { RadioChangeEvent } from 'antd/lib/radio';
 import { Typography, Space, Card } from 'antd';
-import { Meta } from 'antd/lib/list/Item';
-import ProductImage from './ProductImage';
-import { threadId } from 'worker_threads';
 import { CartConsumer } from './context/cartContext';
+
 const { Title } = Typography;
 const { Text, Link } = Typography;
 

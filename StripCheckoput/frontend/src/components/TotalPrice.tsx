@@ -1,7 +1,6 @@
 import React, { Component} from 'react';
 import {CartConsumer, ContextState} from './context/cartContext'; 
-import CheckoutFracksatt from './checkoutFracksatt';
-
+import StripeCheckoutButton from './stripe-button';
 
 
 export interface State {
@@ -26,9 +25,9 @@ export class TotalPrice extends Component<{}, State>{
                                 
                             <h2> {getTotalPrice() + selectedShipping.cost} :- </h2>
                             <p> VAT: {(getTotalPrice() + selectedShipping.cost) * 0.2} :- </p>
+                            < StripeCheckoutButton price = {(getTotalPrice() + selectedShipping.cost) * 0.2}/>
                         </div>
                     )}
-               
                 </CartConsumer>
             )
         }
