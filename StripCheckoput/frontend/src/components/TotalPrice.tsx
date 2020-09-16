@@ -25,7 +25,8 @@ export class TotalPrice extends Component<{}, State>{
                                 
                             <h2> {getTotalPrice() + selectedShipping.cost} :- </h2>
                             <p> VAT: {(getTotalPrice() + selectedShipping.cost) * 0.2} :- </p>
-                            < StripeCheckoutButton price = {(getTotalPrice() + selectedShipping.cost) * 0.2}/>
+                        
+                            < StripeCheckoutButton price = {getTotalPrice() + selectedShipping.cost}/>
                         </div>
                     )}
                 </CartConsumer>
