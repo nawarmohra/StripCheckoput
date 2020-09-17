@@ -23,7 +23,7 @@ export class CartProvider extends Component<{}, ProviderState> {
     }
 
     setSelectedShipping = (shipping: Shipping) => this.setState({ selectedShipping: shipping })
-    
+ 
     addProductToCart = (product: Product) => {
         const clonedCart:CartItem[] = Object.assign([], this.state.cartItems)
         
@@ -66,6 +66,16 @@ export class CartProvider extends Component<{}, ProviderState> {
 
         return sum
     }
+    getCartItem = () => {
+        let test = 0
+        let i = 0
+        for (const cartItem of this.state.cartItems) {
+            test = cartItem.product.id
+            i++
+        }
+
+        return test
+    }
 
     render(){
         return(
@@ -74,7 +84,9 @@ export class CartProvider extends Component<{}, ProviderState> {
                 addProductToCart: this.addProductToCart,
                 removeProductFromCart: this.removeProductFromCart,
                 getTotalPrice: this.getTotalPrice,
-                setSelectedShipping: this.setSelectedShipping
+                setSelectedShipping: this.setSelectedShipping,
+                getCartItem: this.getCartItem,
+                
             }}>
                 {this.props.children}
             </CartContext.Provider>

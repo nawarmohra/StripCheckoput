@@ -30,8 +30,7 @@ export class Cart extends Component<{}, State>{
                                 <h1>Cart</h1>
                                 {   
                                     contextData.cartItems.length ?
-                                    contextData.cartItems.map((product) =>{
-                                        
+                                    contextData.cartItems.map((product) =>{                                       
                                         
                                         return(
                                             <div key = {product.product.id} style = {ProductCartStyle}>
