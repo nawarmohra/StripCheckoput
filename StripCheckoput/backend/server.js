@@ -39,6 +39,7 @@ app.post('/payment', (req, res) => {
   const body = {
     source: req.body.token.id,
     amount: req.body.amount * 100,
+    data: req.body.data,
     currency: 'SEK'
   };
   console.log(body)
