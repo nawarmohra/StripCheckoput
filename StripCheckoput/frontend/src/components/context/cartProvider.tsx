@@ -67,25 +67,18 @@ export class CartProvider extends Component<{}, ProviderState> {
         return sum
     }
     getCartItem = () => {
-        let test = {
-            "id": "",
-            "name": "",
-            "price": ""
-        };
         let i = 0
-     /*    for (const cartItem of this.state.cartItems) {
-            test[i] = cartItem.product.id
-            i++
-        } */
-        for (var cartItem in this.state.cartItems) {
-           // if (this.state.cartItems.hasOwnProperty(cartItem)) {
-             
-                    
-               
-          //  }
-       }
-        return test
+        let test = {}
+        
+
+       
+            test = this.state.cartItems
+           
+     
+        console.log(test)
+        return test 
     }
+
     render(){
         return(
             <CartContext.Provider value={{
