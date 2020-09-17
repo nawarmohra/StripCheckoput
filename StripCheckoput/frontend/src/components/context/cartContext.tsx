@@ -5,10 +5,10 @@ import { Shipping, shippingAlternatives } from '../checkoutFracksatt';
 
 
 export interface ContextState extends ProviderState {
-    addProductToCart: (product: Product) => void,
+    addProductToCart: (product: Product) => void 
     removeProductFromCart: (product: Product) => void
     getTotalPrice: () => number
-    getCartItem:() => Object
+    getCartItem:() => number
     setSelectedShipping: (shipping: Shipping) => void
 }
 
@@ -23,8 +23,9 @@ export const CartContext = createContext<ContextState>({
         console.log("Error removing " + product.name + "to cart")
     },
     getTotalPrice: () => 0,
-    getCartItem:() => {},
+    getCartItem:() => 0,
     setSelectedShipping: (shipping: Shipping) => {}
+
 })
 
 export const CartConsumer = CartContext.Consumer

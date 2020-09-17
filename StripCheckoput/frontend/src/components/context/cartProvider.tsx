@@ -67,25 +67,16 @@ export class CartProvider extends Component<{}, ProviderState> {
         return sum
     }
     getCartItem = () => {
-        let test = {
-            "id": "",
-            "name": "",
-            "price": ""
-        };
+        let test = 0
         let i = 0
-     /*    for (const cartItem of this.state.cartItems) {
-            test[i] = cartItem.product.id
+        for (const cartItem of this.state.cartItems) {
+            test = cartItem.product.id
             i++
-        } */
-        for (var cartItem in this.state.cartItems) {
-           // if (this.state.cartItems.hasOwnProperty(cartItem)) {
-             
-                    
-               
-          //  }
-       }
+        }
+
         return test
     }
+
     render(){
         return(
             <CartContext.Provider value={{
@@ -94,7 +85,8 @@ export class CartProvider extends Component<{}, ProviderState> {
                 removeProductFromCart: this.removeProductFromCart,
                 getTotalPrice: this.getTotalPrice,
                 setSelectedShipping: this.setSelectedShipping,
-                getCartItem: this.getCartItem
+                getCartItem: this.getCartItem,
+                
             }}>
                 {this.props.children}
             </CartContext.Provider>
