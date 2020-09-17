@@ -1,6 +1,5 @@
 const express =  require('express')
 const fs = require('fs')
-const cors = require('cors')
 const path = require('path')
 require('dotenv').config()
 
@@ -18,7 +17,6 @@ const app = express()
 const port = process.env.PORT || 5000
 
 app.use(express.json());
-app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'frontend/build')));
