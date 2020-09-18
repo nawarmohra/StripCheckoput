@@ -71,7 +71,6 @@ export class CartProvider extends Component<{}, ProviderState> {
         let test = {}
         
 
-       
             test = this.state.cartItems
            
      

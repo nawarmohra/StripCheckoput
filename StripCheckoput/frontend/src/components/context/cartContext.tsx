@@ -3,7 +3,6 @@ import {ProviderState, CartItem} from './cartProvider';
 import Products, {Product} from '../Products'
 import { Shipping, shippingAlternatives } from '../checkoutFracksatt';
 
-
 export interface ContextState extends ProviderState {
     addProductToCart: (product: Product) => void,
     removeProductFromCart: (product: Product) => void
