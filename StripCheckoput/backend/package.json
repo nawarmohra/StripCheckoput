@@ -13,17 +13,15 @@
     "backend": "nodemon server.js",
     "build": "cd frontend && npm run build",
     "dev": "concurrently --kill-others-on-fail \"yarn backend\" \"yarn frontend\"",
-    "start": "node server.js",
-    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "start": "node server.js"
+   
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "react-stripe-checkout": "^2.6.3",
     "stripe": "^8.95.0"
   },
   "keywords": [],

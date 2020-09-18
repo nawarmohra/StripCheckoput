@@ -1,6 +1,5 @@
 const express =  require('express')
 const fs = require('fs')
-const cors = require('cors')
 const path = require('path')
 require('dotenv').config()
 
@@ -18,7 +17,6 @@ const app = express()
 const port = process.env.PORT || 5000
 
 app.use(express.json());
-app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'frontend/build')));
@@ -29,18 +27,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-app.listen(port, error => {
-  if (error) throw error;
-  console.log('Server running on port ' + port);
-});
-
 app.post('/payment', (req, res) => {
   
   const body = {
     source: req.body.token.id,
     amount: req.body.amount * 100,
     data: req.body.data,
-    currency: 'SEK'
+    currency: 'sek'
   };
   console.log(body)
   stripe.charges.create(body, (stripeErr, stripeRes) => {
@@ -53,9 +46,7 @@ app.post('/payment', (req, res) => {
         if (err) {
           throw err;
         }
-        
-        // data.toArra()
-
+      
       })
       res.status(200).send({ success: stripeRes });
     }
@@ -63,18 +54,10 @@ app.post('/payment', (req, res) => {
 });
 
 
+app.listen(port, error => {
+  if (error) throw error;
+  console.log('Server running on port ' + port);
+});
 
 
-//app.use('/api', express.json())
-//use json middle ware app.use(JSON)
-
-/* app.get("/api/products", async (req, res) => {
-    
-    const products = await stripe.products.list({
-        limit: 3,
-      });
-    console.log(products);
-    res.json(products)
-    
-} ) */
 
