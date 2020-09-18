@@ -67,14 +67,16 @@ export class CartProvider extends Component<{}, ProviderState> {
         return sum
     }
     getCartItem = () => {
-        let test = 0
-        let i = 0
-        for (const cartItem of this.state.cartItems) {
-            test = cartItem.product.id
-            i++
-        }
 
-        return test
+        let i = 0
+        let test = {}      
+      
+            test = this.state.cartItems           
+     
+        console.log(test)
+        return test 
+
+
     }
 
     render(){

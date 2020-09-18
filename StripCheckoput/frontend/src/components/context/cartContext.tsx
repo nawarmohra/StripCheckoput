@@ -8,7 +8,9 @@ export interface ContextState extends ProviderState {
     addProductToCart: (product: Product) => void 
     removeProductFromCart: (product: Product) => void
     getTotalPrice: () => number
-    getCartItem:() => number
+
+    getCartItem:() => void
+
     setSelectedShipping: (shipping: Shipping) => void
 }
 
@@ -23,7 +25,11 @@ export const CartContext = createContext<ContextState>({
         console.log("Error removing " + product.name + "to cart")
     },
     getTotalPrice: () => 0,
-    getCartItem:() => 0,
+
+    getCartItem: () => {},
+
+ 
+
     setSelectedShipping: (shipping: Shipping) => {}
 
 })
