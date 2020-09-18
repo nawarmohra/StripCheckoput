@@ -67,16 +67,16 @@ export class CartProvider extends Component<{}, ProviderState> {
         return sum
     }
     getCartItem = () => {
-        let i = 0
-        let test = {}
-        
 
-       
-            test = this.state.cartItems
-           
+        let i = 0
+        let test = {}      
+      
+            test = this.state.cartItems           
      
         console.log(test)
         return test 
+
+
     }
 
     render(){
@@ -87,7 +87,8 @@ export class CartProvider extends Component<{}, ProviderState> {
                 removeProductFromCart: this.removeProductFromCart,
                 getTotalPrice: this.getTotalPrice,
                 setSelectedShipping: this.setSelectedShipping,
-                getCartItem: this.getCartItem
+                getCartItem: this.getCartItem,
+                
             }}>
                 {this.props.children}
             </CartContext.Provider>
