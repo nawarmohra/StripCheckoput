@@ -2,16 +2,18 @@ import React, {createContext, Component} from 'react';
 import {ProviderState, CartItem} from './cartProvider';
 import Products, {Product} from '../Products'
 import { Shipping, shippingAlternatives } from '../checkoutFracksatt';
-
-
+ 
 export interface ContextState extends ProviderState {
-    addProductToCart: (product: Product) => void,
+    addProductToCart: (product: Product) => void 
     removeProductFromCart: (product: Product) => void
     getTotalPrice: () => number
+    emptyCart:() => void
     getCartItem:() => void
+
+ 
     setSelectedShipping: (shipping: Shipping) => void
 }
-
+ 
 export const CartContext = createContext<ContextState>({
     cartItems: [],
     selectedShipping: shippingAlternatives[0],
@@ -23,8 +25,15 @@ export const CartContext = createContext<ContextState>({
         console.log("Error removing " + product.name + "to cart")
     },
     getTotalPrice: () => 0,
+ 
     getCartItem: () => {},
+ 
+    emptyCart:()=> undefined,
+ 
+ 
+ 
     setSelectedShipping: (shipping: Shipping) => {}
+ 
 })
-
+ 
 export const CartConsumer = CartContext.Consumer

@@ -32,11 +32,6 @@ export class Header extends Component<{}, State>{
         console.log(inCart)
 
 
-
-
-
-
-
           return (
             <div style={HeaderStyle}>
               <div style={{}}>

@@ -12,7 +12,6 @@ export interface State {
 }
 
 
-
 export class Cart extends Component<{}, State>{
 
 
@@ -31,8 +30,7 @@ export class Cart extends Component<{}, State>{
                                 {   
                                     contextData.cartItems.length ?
                                     contextData.cartItems.map((product) =>{
-                                        
-                                        
+                                          
                                         return(
                                             <div key = {product.product.id} style = {ProductCartStyle}>
                                                 <Link to={"/product/" + product.product.name}>
@@ -51,8 +49,6 @@ export class Cart extends Component<{}, State>{
                                                 Remove From Cart
                                                 </Button>
                                              </div>
-                                             
-
                                         )
                                     }) 
                                     :

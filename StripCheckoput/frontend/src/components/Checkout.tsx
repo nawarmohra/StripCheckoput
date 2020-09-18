@@ -17,10 +17,7 @@ function Checkout(){
         <div >
 
             <Cart/>
-
             <TotalPrice/>
-            
-            
 
         </div>
         

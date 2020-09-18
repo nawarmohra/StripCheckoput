@@ -7,7 +7,6 @@ require('dotenv').config()
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
 
-
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 //console.log(process.env.STRIPE_SECRET_KEY);
@@ -27,18 +26,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-app.listen(port, error => {
-  if (error) throw error;
-  console.log('Server running on port ' + port);
-});
-
 app.post('/payment', (req, res) => {
   
   const body = {
     source: req.body.token.id,
     amount: req.body.amount * 100,
     data: req.body.data,
-    currency: 'SEK'
+    currency: 'sek'
   };
   console.log(body)
   stripe.charges.create(body, (stripeErr, stripeRes) => {
@@ -51,8 +45,7 @@ app.post('/payment', (req, res) => {
         if (err) {
           throw err;
         }
-        // data.toArra()
-
+      
       })
       res.status(200).send({ success: stripeRes });
     }
@@ -60,18 +53,10 @@ app.post('/payment', (req, res) => {
 });
 
 
+app.listen(port, error => {
+  if (error) throw error;
+  console.log('Server running on port ' + port);
+});
 
 
-//app.use('/api', express.json())
-//use json middle ware app.use(JSON)
-
-/* app.get("/api/products", async (req, res) => {
-    
-    const products = await stripe.products.list({
-        limit: 3,
-      });
-    console.log(products);
-    res.json(products)
-    
-} ) */
 

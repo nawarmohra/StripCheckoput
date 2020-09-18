@@ -9,7 +9,6 @@ export interface State {
 
 }
 
-
 export class TotalPrice extends Component<{}, State>{
 
     constructor(props: {}) {

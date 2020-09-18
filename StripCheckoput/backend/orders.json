@@ -1,1 +1,49 @@
-{"amount":13035,"token":{"id":"tok_1HSUnPIvNlm4IM8a88i0UmCk","object":"token","card":{"id":"card_1HSUnPIvNlm4IM8aAprirx6t","object":"card","address_city":"67","address_country":"Sweden","address_line1":"dd","address_line1_check":"pass","address_line2":null,"address_state":"S","address_zip":"7667","address_zip_check":"pass","brand":"Visa","country":"US","cvc_check":"pass","dynamic_last4":null,"exp_month":1,"exp_year":2022,"funding":"credit","last4":"4242","metadata":{},"name":"dd","tokenization_method":null},"client_ip":"78.71.68.243","created":1600378659,"email":"bara.abd@yahoo.com","livemode":false,"type":"card","used":false},"prodStripe":[{"product":{"id":3,"name":"Galaxy S8","description":"Really cool edge to edge smartphone from Samsung.","img":"SamsungS8.png","price":7990},"quantity":1},{"product":{"id":1,"name":"One Plus 5","description":"Sleek and powerful smartphone from One Plus.","img":"OnePlus5.png","price":4995},"quantity":1}]}
+{
+  "amount": 11545,
+  "token": {
+    "id": "tok_1HSmgmIvNlm4IM8ap64xAXCk",
+    "object": "token",
+    "card": {
+      "id": "card_1HSmgmIvNlm4IM8ajuBsaWvC",
+      "object": "card",
+      "address_city": "angered",
+      "address_country": "Sweden",
+      "address_line1": "tradsgardet",
+      "address_line1_check": "unchecked",
+      "address_line2": null,
+      "address_state": "O",
+      "address_zip": "42486",
+      "address_zip_check": "unchecked",
+      "brand": "Visa",
+      "country": "US",
+      "cvc_check": "unchecked",
+      "dynamic_last4": null,
+      "exp_month": 12,
+      "exp_year": 2033,
+      "funding": "credit",
+      "last4": "4242",
+      "metadata": {},
+      "name": "nawar mohra",
+      "tokenization_method": null
+    },
+    "client_ip": "78.71.219.131",
+    "created": 1600447440,
+    "email": "nawarmohra@gmail.com",
+    "livemode": false,
+    "type": "card",
+    "used": false
+  },
+  "prodStripe": [
+    {
+      "product": {
+        "id": 0,
+        "name": "iPhone X",
+        "description": "Last years phone from Apple with a beautiful all display front.",
+        "img": "iPhoneX.png",
+        "price": 11495
+      },
+      "quantity": 1
+    }
+  ]
+}
+{"amount":24035,"token":{"id":"tok_1HSmhXIvNlm4IM8aIcDRFTcD","object":"token","card":{"id":"card_1HSmhXIvNlm4IM8ae7ngWI0u","object":"card","address_city":"angered","address_country":"Sweden","address_line1":"tradsgardet","address_line1_check":"unchecked","address_line2":null,"address_state":"O","address_zip":"42486","address_zip_check":"unchecked","brand":"Visa","country":"US","cvc_check":"unchecked","dynamic_last4":null,"exp_month":12,"exp_year":2023,"funding":"credit","last4":"4242","metadata":{},"name":"nawar mohra","tokenization_method":null},"client_ip":"78.71.219.131","created":1600447487,"email":"nawarmohra@gmail.com","livemode":false,"type":"card","used":false},"prodStripe":[{"product":{"id":1,"name":"One Plus 5","description":"Sleek and powerful smartphone from One Plus.","img":"OnePlus5.png","price":4995},"quantity":1},{"product":{"id":4,"name":"LG V30","description":"Super nice and beautiful smartphone from LG.","img":"LGV30.png","price":7495},"quantity":1},{"product":{"id":0,"name":"iPhone X","description":"Last years phone from Apple with a beautiful all display front.","img":"iPhoneX.png","price":11495},"quantity":1}]}
