@@ -15,25 +15,23 @@ export class TotalPrice extends Component<{}, State>{
         super(props)
     }
 
-
-
     render() {
         return (
             <CartConsumer>
                 {(contextData: ContextState) => {
-                    let inCart: number[] = [];
+                   let inCart: number[] = [];
                     contextData.cartItems.map((product) => {
                         
                        console.log("contextData.cartItems",contextData.cartItems)
                        
                     })
-                    console.log("getCartItemgetCartItemgetCartItem ",contextData.getCartItem())
+              
                     return (
                         <div>
                             <h2> {contextData.getTotalPrice() + contextData.selectedShipping.cost} :- </h2>
                             <p> VAT: {(contextData.getTotalPrice() + contextData.selectedShipping.cost) * 0.2} :- </p>
-                            
-                            < StripeCheckoutButton price = {contextData.getTotalPrice() + contextData.selectedShipping.cost} prod={contextData.getCartItem()}/>
+                         
+                            <StripeCheckoutButton price = {contextData.getTotalPrice() + contextData.selectedShipping.cost} prod={contextData.getCartItem()}/>
                         </div>
                     )
 
