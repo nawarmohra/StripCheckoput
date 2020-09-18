@@ -10,9 +10,23 @@ We have 2 files :
 ReactJS
 Typescript
 NodeJS
+Stripe
+
 ### install
-npm install (must always run before first start or when changing source code)
-npm start
+yarn add typescript, Or npm install -g typescript
+npm install or yarn install (must always run before first start or when changing source code)
+
+yarn add --dev @testing-library/jest-dom
+yarn add @testing-library/user-event @testing-library/dom --dev
+yarn add antd
+yarn add --dev jest
+npm install react react-dom
+npm install --save react-router
+yarn add react-stripe-elements
+yarn add stripe
+yarn add axios
+npm install react-stripe-checkout
+
 
 npm run eject
 Note: this is a one-way operation. Once you eject, you can’t go back!
@@ -26,7 +40,7 @@ NodeJS
 Axios 
 FS system
 
-### Payment service
+### Payment service (Backend)
 
 Stripe
 
@@ -34,15 +48,35 @@ Stripe
 npm install express
 npm install axios
 npm install react-stripe-checkout (Stripe's Checkout makes it almost too easy to take people's money. This should make it even easier if you're building a react application.)
-npm install cors (This is a Node.js module available through the npm registry.)
+npm install body-parser
+yarn add dotenv or npm install dotenv
+npm install --save path
+
 
 # To start the project
-Once you have installed node.js and all the necessary extensions in your code editor, do the following:
 
-Run git clone https://github.com/nawarmohra/StripCheckoput.git 
-Go to the 'cloned' folder cd StripCheckoput
-Run npm install 
-Run npm start
+- To run the project, you also need to put the security key in Stripe in the .env file, and put the * Publishable key * in the stripe-button component in the front row on line 14
+
+
+
+- We have created a script to run both backend and frontend at the same time by typing just in Terminal: 
+cd backend
+yarn dev
+yarn dev 
+
+then run backend and frontend in the same time.
+
+This code is in package.json backend:
+
+"scripts": {
+"frontend": "cd ../frontend && yarn start",
+"backend": "nodemon server.js",
+"build": "cd frontend && npm run build",
+"dev": "concurrently --kill-others-on-fail \" yarn backend \ "\" yarn frontend \ "",
+"start": "node server.js"
+ },
+
+ 
 
 Scroll to http: // localhost: 3000 (if the page does not open automatically)
 

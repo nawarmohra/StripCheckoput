@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
+import {CartConsumer, ContextState} from './context/cartContext'; 
+
 
 
 
@@ -26,7 +28,8 @@ const prodStripe = prod
       .then(async response => {
         /* console.log(" test response",response) */
         setsuccess(true)
-       
+        window.location.reload(true);
+        
       })
       .catch(error => {
         console.log('Payment Error:', error);
@@ -38,7 +41,6 @@ const prodStripe = prod
   console.log(price)
   if (success) {
     return <Redirect to='/success'/>
-  
     
   } else if (cancel) {
     return <Redirect to='/fel' />
